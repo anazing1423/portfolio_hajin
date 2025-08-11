@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice02</title>
+  <style>
+    .table {
+      border: 1px solid#000000;
+      border-collapse: collapse;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+    }
+
+    .table td,
+    table tr {
+      border: 1px solid#000000;
+
+    }
+
+    .back {
+      width: 80px;
+      height: 60px;
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <ol>
+    <li>
+      <h4>시맨틱태그가 무엇인지 설명하세요</h4>
+      <p>시각적 효과보다는 의미를 갖는 태그</p>
+    </li>
+    <li>
+      <h4>순서있는 목록을 만드는 태그는?</h4>
+      <p>ol</p>
+    </li>
+    <li>
+      <h4>순서없는 목록을 만드는 태그는?</h4>
+      <p>ul</p>
+    </li>
+    <li>
+      <h4>들여쓰기 하는 태그는?</h4>
+      <p>br</p>
+    </li>
+    <li>
+      <h4>제시된 형태의 테이블을 만들어 보세요.</h4>
+      <table class="table">
+        <caption>5-1</caption>
+        <tr>
+          <td colspan="2">1</td>
+        </tr>
+        <tr>
+          <td rowspan="2">2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+        </tr>
+      </table>
+      <br>
+      <table class="table">
+        5-2
+        <tr>
+          <td rowspan="2">1</td>
+          <td colspan="2">2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      <h4>남대문 이미지를 구해서 출력해보세요</h4><img src="pictures/namdaemooon.jpg" style="width: 200px; height: auto;">
+    </li>
+    <li>
+      <h4>유튜브에서 덕수궁 동영상을 찾아 출력해보세요</h4>
+      <p><iframe width="560" height="315" src="https://www.youtube.com/embed/izpEB7nTZls?si=QDH22lYD1MEwCNEh"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe></p>
+    </li>
+  </ol>
+  <a href="../index.html"><button class="back">뒤로 가기</button></a>
+</body>
+
+</html>

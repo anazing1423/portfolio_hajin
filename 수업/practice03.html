@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프런트엔드 개발자 지원서</title>
+  <style>
+    .back{
+      width: 80px;
+      height: 60px;
+      float: right;
+    }
+    .none {
+      list-style: none;
+
+    }
+
+    .frm {
+      border: 1px solid;
+      width: 50%;
+      height: auto;
+    }
+
+    .frm textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .frm input[type="text"] {
+      width: 40%;
+      box-sizing: border-box;
+    }
+
+    .line {
+      width: auto;
+
+    }
+
+    .main {
+      padding: 30px;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="frm">
+    <div class="main">
+      <h1 style="margin-left: 30px;">프런트 엔드 개발자 지원서
+      </h1>
+      <p style="margin-left: 30px;">
+        HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.
+      </p>
+      <hr class="line">
+      <ul class="none">
+        <li>
+          <h5>개인 정보</h5>
+          <ul class="none">
+            <li><label for="name">이름 </label><input type="text" placeholder="공백 없이 입력하세요."></li>
+            <li><label for="cell">연락처 </label><input type="text"></li>
+          </ul>
+
+        </li>
+
+        <li>
+          <!-- radio할 때 이름(세가지 옵션이 같은 설문이라는 뜻 인듯)이랑 id 꼭해라; -->
+          <h5>지원 분야</h5>
+          <ul class="none">
+            <li><input type="radio" name="kkk" id="web" value="web"><label for="web">웹 퍼블리싱웹 애플리케이션 개발</label></li>
+            <li><input type="radio" name="kkk" id="app" value="app"><label for="app">웹 애플리케이션 개발</label></li>
+            <li><input type="radio" name="kkk" id="dev" value="dev"><label for="dev">개발 환경 개선</label></li>
+          </ul>
+        </li>
+
+        <li><label for="dong">
+            <h5>지원 동기</h5>
+          </label>
+          <textarea id="dong" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+
+        </li>
+        <input type="submit" value="접수하기">
+        <input type="reset" value="다시 쓰기">
+      </ul>
+    </div>
+  </form>
+    <a href="../index.html"><button class="back">뒤로 가기</button></a>
+</body>
+
+</html>
