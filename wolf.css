@@ -1,0 +1,50 @@
+
+.wftext {
+  position: relative; 
+  /* 박스의 기준점 잡음 */
+  display: inline-block;
+  /* 이 박스가 텍스트 안에서 그대로 텍스트역할하게해줌 */
+}
+.wftext img {
+  position: absolute;
+  /* 위에 relative 있어서 얘가 움직일 수 있는 영역은 wftect 안임, 그 안에서 자유롭게 움직일 수 있는 태그*/
+display: none;
+/* 처음엔 마우스 안 올렸으니까 안 보여야 함 */
+top: 0%;
+left: 50%;
+/* 텍스트 가운데에서 나오기 위한 첫걸음, 우선  위아래 맞춰두고 가운데인 50%로 민다*/
+width: 100%;
+height: 100%;
+/* 텍스트 박스랑 크기를 맞춰야 가운데 지정하기 편함 */
+transform: translateX(-50%);
+/* 그냥 left:50만 넣으면 사진을 왼쪽변이 전체 크기의 50%에 있다고 설정되어서 이미지 왼쪽비고 오른쪽으로 튀어나오는뭔말알 상태 되는데
+그걸 방지하기 위해 미리 50% 땡겨놓는거 */
+z-index: 10; 
+/* 레이어 맨 위로 올리는거, 수치는 음수부터 9999같이개큰것도다넣을수있음 */
+opacity: 0;
+pointer-events: none;
+/* 투명했을때는 적용안하게 하는것 */
+}
+.wftext:hover img {
+display: block;
+opacity: 1;
+animation: kuang 0.3s ease-in-out 3;
+pointer-events: auto;
+}
+
+@keyframes kuang {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+
+   
+}
