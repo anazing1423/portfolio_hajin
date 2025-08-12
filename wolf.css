@@ -28,8 +28,9 @@ pointer-events: none;
 .wftext:hover img {
 display: block;
 opacity: 1;
-animation: kuang 0.3s ease-in-out 3;
+animation: kuang 0.3s ;
 pointer-events: auto;
+animation-iteration-count: infinite;
 }
 
 @keyframes kuang {
