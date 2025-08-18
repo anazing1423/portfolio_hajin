@@ -8,7 +8,16 @@
     button{
       box-shadow: 2px 2px 3px
        chocolate;
+       /* display: ; 태그를 ~~로바꿈 */
+       /* block:  p처럼 가로 하나를 다 차지하는 형태*/
+       /* inline: 인라인레벨요소? */
+       /* inline-block: 줄 안에 들어가는 블럭 형태, 글자쫘라락있고 그중간에있는걸 블록으로바꿔도 줄바꿈없이 글자같은형태유지 */
+       /* none: 안보여줌 */
     }
+    ul > li{ }
+    /* child selector 바로 아랫단계. 직계 자식만 선택 부모 > 자식 형태*/
+    ul li p { }
+    /* decendant? selentor 손주. 자기 아래에 있는 증손주고손주전부선택 가능 핣핢 (부모 자식*생략가능) 의자식 형태*띄어쓰기만하면됨 */
     .box {
 width: 50px;
 height: 50px;
@@ -21,5 +30,11 @@ border-radius: 50%;
 <body>
   <button>버튼입니다</button>
   <div class="box">box</div>
+
+  <ul>
+    <li>
+      <p></p>
+    </li>
+  </ul>
 </body>
 </html>

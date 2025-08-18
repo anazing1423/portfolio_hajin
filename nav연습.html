@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(233, 238, 232);
+    }
+    nav { background-color: rgb(60, 85, 53);}
+    nav a {
+      color: aliceblue;
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      padding: 5px;
+      line-height: 30px;
+      text-align: center;
+      line-height: 30px;
+      text-decoration: none;
+    }
+    nav a::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-image: url("수업/pictures/wf.jpg");
+      margin: 2px;
+      vertical-align: middle;
+      background-size: cover;
+      
+    }
+    nav a:hover::before {
+      opacity: 0;
+    }
+    
+    nav a::first-letter {
+      color: rgb(218, 167, 100);
+    }
+    nav a:hover{
+      color: rgb(255, 191, 72) ;
+
+    }
+
+    /* 호버안된나머지메뉴는 회색변경 */
+    /* 호버된 네비게이션 중 호버안된 a태그들만 색변경/ 호버안된 다른 네비는적용안됨 */
+    nav:has(a:hover) a:not(a:hover){
+      color: rgb(139, 172, 131);
+      
+    }
+    nav:has(a:hover) a:not(:hover)::before{
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav> <a href="#">home</a>
+    <a href="#">about</a>
+    <a href="#">portfolio</a>
+    <a href="#">contact</a>
+  </nav>
+  <br>
+<nav> <a href="#">home</a>
+    <a href="#">about</a>
+    <a href="#">portfolio</a>
+    <a href="#">contact</a>
+  </nav>
+
+</body>
+
+</html>

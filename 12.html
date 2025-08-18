@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section p{color: rgb(32, 131, 98);}
+    h1+p{background-color: plum;}
+    /* 같은 레벨의 바로 다음 태그 */
+    h1~p{font-style: italic;}
+    /* 본인 다음에 있는 같은 레벨의 모든 "" 태그 */
+
+    a[href]{
+      background-color: gold;
+      border: 1px solid #222;
+      font-weight: normal;
+    }
+    /* a 태그 중 [속성]이 href인것모두선택 */
+    a[target="_blank"]{
+      padding: 45px;
+      background: url(/수업/pictures/wf.jpg);
+    }
+/* a태그 중 타겟이 ""인것선택 */
+[class~=buyton]{border: 1px solid bisque;}
+
+  </style>
+</head>
+<body>
+  <section>
+    <p>맨즈핫핫</p>
+    <h1>윗아웃미</h1>
+    <p>조정간단발</p>
+    <p>디스거스미</p>
+    <p>인천의찐친</p>
+    <div>
+      <p>이리바리</p>
+      <p>유롱노미</p>
+    </div>
+  </section>
+
+
+
+
+  <ul>
+    <li><a title>ㅅㅁㄷㅁㄴ</a></li>
+    <li><a href="#">수퍼</a></li>
+    <li><a href="#">비와</a></li>
+    <li><a href="#" class="button">요</a></li>
+    <li><a href="#"target="_blank">주륵주륵</a></li>
+  </ul>
+
+
+</body>
+</html>
