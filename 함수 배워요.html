@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --main-bg-color: #ccc;
+      /* 변수 */
+      --main-text-color: #ffb6b6;
+    }
+
+    body {
+      background-color: var(--main-bg-color);
+      color: var(--main-text-color);
+    }
+
+    nav {
+      background-color: azure;
+    }
+
+    nav a {
+      filter: grayscale(100%);
+      text-decoration: none;
+      color: #ffb6b6;
+    }
+
+    nav a:hover {
+      filter: grayscale(0%);
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .ing {
+      overflow: hidden;
+      margin-right: 10px;
+      border: 2px solid #c4abab; 
+      animation:slideright 1s infinite alternate;
+      transition: all 0.05s ease;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      filter: blur(3px) grayscale(100%);
+    }
+
+    img:hover {
+      filter: none;
+      transform: scale(1.05);
+    }
+
+    /* ------------------------------------------------------------- */
+
+    @keyframes slideright {
+      0% {
+        transform:perspective (120px) 
+        rotateX (0deg) rotateY (0deg) ;
+      }
+      40% {
+        transform:perspective (120px) 
+        rotateX (180deg) rotateY (0deg) ;
+      }
+      70% {
+        transform:perspective (120px) 
+        rotateX (180deg) rotateY (180deg) ;
+      }
+      100% {
+        transform:perspective (120px) 
+        rotateX (0deg) rotateY (180deg) ;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav><a href="#">hone</a></nav>
+
+
+  <div>
+    <ul>
+      <li>
+        <div class="ing"><a href="#"><img src="수업/pictures/1.jpg" alt="1"></a></div>
+      </li>
+      <li>
+        <div class="ing"><a href="#"><img src="수업/pictures/2.jpg" alt="2"></a></div>
+      </li>
+      <li>
+        <div class="ing"><a href="#"><img src="수업/pictures/3.jpg" alt="3"></a></div>
+      </li>
+      <li>
+        <div class="ing"><a href="#"><img src="수업/pictures/4.jpg" alt="4"></a></div>
+      </li>
+      <li>
+        <div class="ing"><a href="#"><img src="수업/pictures/5.jpg" alt="5"></a></div>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

@@ -5,22 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
   <style>
-    body{
+    * a {
+      text-decoration: none;
+      color: aliceblue;
+    }
+    /* ---------------------------------------------------- */
+    body {
       background-color: rgb(233, 238, 232);
     }
-    nav { 
-      background-color: rgb(60, 85, 53);
+
+    nav {
+      background-color: rgb(61, 87, 54);
       transition: all 0.5s ease;
       overflow: hidden;
-    position: sticky;
-    height: 50px;
-    line-height: 50px;
-    top: 0;
-  }
-    nav:hover {
-      height:250px;
+      position: sticky;
+      height: 50px;
+      line-height: 50px;
+      top: 0;
     }
+
+    nav:hover {
+      height: 250px;
+    }
+    /* ------------------------------------------------------------------------------------- */
     nav a {
       color: aliceblue;
       display: inline-block;
@@ -29,36 +38,70 @@
       padding: 5px;
       line-height: 30px;
       text-align: center;
-      text-decoration: none;
       transition: transform 0.1s ease;
     }
+
     nav a::before {
       content: "*";
       width: 10px;
       height: 10px;
-     
-      
     }
+
     nav a:hover::first-letter {
       color: transparent;
     }
-    
+
     nav a::first-letter {
       color: rgb(218, 167, 100);
     }
-    nav a:hover{
-      color: rgb(255, 191, 72) ;
+
+    nav a:hover {
+      color: rgb(255, 191, 72);
       transform: scale(1.2);
     }
 
     /* 호버안된나머지메뉴는 회색변경 */
     /* 호버된 네비게이션 중 호버안된 a태그들만 색변경/ 호버안된 다른 네비는적용안됨 */
-    nav:has(a:hover) a:not(a:hover){
+    nav:has(a:hover) a:not(a:hover) {
       color: rgb(139, 172, 131);
-      
     }
-    nav:has(a:hover) a:not(:hover)::first-letter{
+
+    nav:has(a:hover) a:not(:hover)::first-letter {
       color: transparent;
+    }
+    /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
+    footer {
+      color: aliceblue;
+      background-color: rgb(61, 87, 54);
+      width: 100%;
+      position: fixed;
+      bottom: 0;      
+    }
+    .rightfooter{
+     display: flex;
+     flex-direction: column;
+     width: 15%;
+     margin-left: auto;
+     margin-top: 15px;
+    }
+    
+    .icons{
+      display: flex;
+      margin-left: 15%;
+      gap: 10px;
+    }
+    .icons a{
+      font-size: 20px;
+    }
+    .rightfooter hr {
+      width: 80%;
+    }
+    .rightfooter p {
+      margin-top: 10px;
+      margin-right: 15%;
+      margin-bottom: 10px;
+      font-size: 15px;
+text-align: right;
     }
   </style>
 </head>
@@ -69,7 +112,18 @@
     <a href="#">Portfolio</a>
     <a href="#">Contact</a>
   </nav>
-  
+  <footer>
+    <div class="rightfooter">
+    <div class="icons">
+      <a href="#"><i class="fi fi-brands-instagram"></i></a>
+      <a href="#"><i class="fi fi-brands-youtube"></i></a>
+      <a href="#"><i class="fi fi-brands-twitter-alt"></i></a>
+    </div>
+    <hr>
+    <p>서울시 성동구 무학봉 23길 3-1</p>
+    <p>&copy;2025. 안하진 All Rights Reserved.</p>
+  </div>
+  </footer>
 </body>
 
 </html>
