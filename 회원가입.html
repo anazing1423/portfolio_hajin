@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동호회 가입</title>
+  <style>
+    @keyframes rainbow {
+      0% {
+        color: red;
+      }
+
+      14% {
+        color: orange;
+      }
+
+      28% {
+        color: yellow;
+      }
+
+      42% {
+        color: green;
+      }
+
+      57% {
+        color: blue;
+      }
+
+      71% {
+        color: indigo;
+      }
+
+      85% {
+        color: violet;
+      }
+
+      100% {
+        color: red;
+      }
+    }
+
+    #joinfrm {
+      text-align: left;
+      align-content: center;
+    }
+
+    button {
+      background-color: rgb(17, 199, 123);
+    }
+
+    .symbol {
+      animation: rainbow 0.7s linear infinite;
+    }
+
+    .symbol1 {
+      animation: rainbow 0.7s linear infinite;
+    }
+
+    .rainbow {
+      animation: rainbow 0.7s linear infinite;
+    }
+
+    figure {
+      align-content: right;
+    }
+
+    span {
+      color: red;
+      font-size: xx-small;
+    }
+  </style>
+</head>
+
+<body>
+  <h2><em><strong>호구 가입</strong></em></h2>
+  <div>
+    <form name="joinfrm" id="joinfrm" method="post" action="#">
+      <table>
+        <tr>
+          <td>실명</td>
+          <td>
+            <label for="name"></label>
+            <input type="text" name="name" id="name" required>
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>생년월일</td>
+          <td>
+            <label for="birth"></label>
+            <select name="birth" id="birth" required>
+              <option value="">선택</option>
+            </select>년
+            <select name="birthm" id="birthm" required>
+              <option value="">선택</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>월
+            <select name="birthd" id="birthd" required>
+              <option value="">선택</option>
+            </select>일
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>성별</td>
+          <td>
+            <label for="gender"></label>
+            <select name="gender" id="gender" required>
+              <option value="">선택</option>
+              <option id="male" value="male">남성</option>
+              <option id="female" value="female">여성</option>
+              <option id="none" value="none">중성</option>
+              <option id="potato" value="darkmoon">종성</option>
+              <option id="alpha" value="special">알파</option>
+              <option id="omega" value="special">오메가</option>
+              <option id="beta" value="special">베타</option>
+              <option id="darkmoon" value="darkmoon">늑대인간/뱀파이어</option>
+              <option id="alien" value="special">외계인</option>
+            </select>
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>아이디</td>
+          <td>
+            <label for="Id"></label>
+            <input type="text" name="Id" id="Id" minlength="6" maxlength="32" required>
+            <span>※</span>
+            <span>6자~32자</span>
+          </td>
+        </tr>
+        <tr>
+          <td>비밀번호</td>
+          <td>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" required pattern="^(?=.*[0-9])[A-Za-z0-9!@#$%^&*]{8,}$"
+              title="8자 이상, 영문, 숫자 조합">
+            <span id="pwchk">※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>비밀번호 확인</td>
+          <td>
+            <label for="password2"></label>
+            <input type="password" name="password2" id="password2" required autocomplete="off">
+            <span id="pwerror" style="color:red; display:none;">※오타나셨습니다</span>
+          </td>
+        </tr>
+        <tr>
+          <td>닉네임</td>
+          <td>
+            <input type="text" name="nick" id="nick" required autocomplete="off">
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>최애</td>
+          <td>
+            <input type="text" name="favorite" id="favorite" autocomplete="off">
+            <span>본인 식별을 위한 질문입니다</span>
+          </td>
+        </tr>
+        <tr>
+          <td>선호 cp</td>
+          <td>
+            <input type="text" name="cp" id="cp" autocomplete="off">
+            <span>불미 방지를 위한 질문입니다</span>
+          </td>
+        </tr>
+        <tr>
+          <td>근친이 좋냐?!</td>
+          <td>
+            <input type="radio" name="inc" id="incy" value="yyyyyyyes" required><label for="incy">제발저요제발저요</label>
+            <input type="radio" name="inc" id="incn" value="noooo"><label for="incn">꺼져라</label>
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>개인정보 제공 동의</td>
+          <td>
+            <input type="radio" name="agree" id="ican" value="ican"><label for="ican">예</label>
+            <input type="radio" name="agree" id="icant" value="icant"><label for="icant">아니오</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><button id="submit" type="submit" style="display: table;">확인</button></td>
+        </tr>
+
+      </table>
+    </form>
+    <form id="secretfrm">
+      <table id="secret" style="display: none;">
+        <tr>
+          <td>주민번호 13자리</td>
+          <td>
+            <input type="text" name="specialid" id="specialid" style="width: 130px;" required maxlength="6"
+              inputmode="numeric" autocomplete="off"> -
+            <input type="password" name="specialid" id="specialid2" style="width: 130px;" maxlength="7" required
+              inputmode="numeric" autocomplete="off">
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>주거래 은행</td>
+          <td>
+            <input type="text" name="bank" id="bank" required autocomplete="off">
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>통장 비밀번호</td>
+          <td>
+            <input type="text" name="bbpw" id="bbpw" style="width: 70px;" required maxlength="4" inputmode="numeric"
+              autocomplete="off">
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>혈액형</td>
+          <td>
+            <select name="Btype" id="btype" required>
+              <option value="">선택</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="O">O</option>
+              <option value="AV">AV</option>
+            </select>
+            <span>※</span>
+          </td>
+        </tr>
+        <tr>
+          <td>현재 병원에 다니고 있거나<br>복용하고 있는 약이 있습니까?</td>
+          <td>
+            <select name="pill" id="pill" required>
+              <option value="">선택</option>
+              <option value="y">예</option>
+              <option value="n">아니오</option>
+            </select>
+            <span>※</span>
+
+            <input type="text" id="pillyes" name="pillyes" placeholder="병명 또는 복용 중인 약 입력" style="display: none;"
+              required>
+          </td>
+        </tr>
+        <tr>
+          <td>지문 사진</td>
+          <td>
+            <input type="file" name="finger" id="finger" accept="image/*" required>
+            <span>※흐릿한 부분이 없고 정방향으로 찍은 사진</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="white-space: nowrap;">
+            <span class="symbol">&spades;&euro;&euro;&pound;&pound;&yen;&yen;&amp;&hearts;&raquo;&raquo;</span>
+            <button type="submit" id="press" class="rainbow">누르면 돈이 나와요</button>
+            <span class="symbol1">&laquo;&laquo;&clubs;&amp;&yen;&yen;&pound;&pound;&euro;&euro;&diams;</span>
+          </td>
+        </tr>
+
+      </table>
+    </form>
+  </div>
+  <script>
+    // 숨겨진 칸 체크하면 나타나게 하는 함수
+    const pillSelect = document.getElementById('pill');
+    const pillDetailInput = document.getElementById('pillyes');
+
+    pillSelect.addEventListener('change', () => {
+      if (pillSelect.value === 'y') {
+        pillDetailInput.style.display = 'inline-block';  // 텍스트박스 보이기
+        pillDetailInput.required = true;  // 필수 입력으로 변경
+      } else {
+        pillDetailInput.style.display = 'none';          // 숨기기
+        pillDetailInput.required = false;  // 필수 해제
+        pillDetailInput.value = '';         // 입력값 초기화
+      }
+    });
+    // 숫자만 입력 허용하는 함수
+    function onlyNumberInput(el) {
+      el.value = el.value.replace(/[^0-9]/g, '');
+    }
+
+    // 주민번호 필드 숫자 제한
+    const specialid = document.getElementById('specialid');
+    const specialid2 = document.getElementById('specialid2');
+    const bbpw = document.getElementById('bbpw');
+
+    specialid.addEventListener('input', () => onlyNumberInput(specialid));
+    specialid2.addEventListener('input', () => onlyNumberInput(specialid2));
+    if (bbpw) bbpw.addEventListener('input', () => onlyNumberInput(bbpw));
+
+    // ican, icant 라디오 버튼에 따른 테이블 토글
+    const icanRadio = document.getElementById('ican');
+    const icantRadio = document.getElementById('icant');
+    const secrettable = document.getElementById('secret');
+    const submit = document.getElementById('submit');
+
+    function toggleTable() {
+      if (icanRadio.checked) {
+        secrettable.style.display = 'table';
+        submit.style.display = 'none';
+      } else {
+        secrettable.style.display = 'none';
+        submit.style.display = 'table';
+      }
+
+    }
+
+    icanRadio.addEventListener('change', toggleTable);
+    icantRadio.addEventListener('change', toggleTable);
+    toggleTable(); // 초기 상태
+
+    // 생년월일 년, 일 옵션 생성
+    const yearselect = document.getElementById('birth');
+    const dayselect = document.getElementById('birthd');
+
+    for (let y = 500; y <= 2007; y++) {
+      const option = document.createElement('option');
+      option.value = y;
+      option.textContent = y;
+      yearselect.appendChild(option);
+    }
+    for (let d = 1; d <= 31; d++) {
+      const option = document.createElement('option');
+      option.value = d;
+      option.textContent = d;
+      dayselect.appendChild(option);
+    }
+
+    // 비밀번호 확인 일치 검사
+    const pw = document.getElementById('password');
+    const pw2 = document.getElementById('password2');
+    const msg = document.getElementById('pwerror');
+
+    pw2.addEventListener('input', () => {
+      if (pw.value !== pw2.value) {
+        msg.style.display = 'inline';
+      } else {
+        msg.style.display = 'none';
+      }
+    });
+  </script>
+  <script>
+    const incnRadio = document.getElementById('incn');
+
+    incnRadio.addEventListener('change', () => {
+      if (incnRadio.checked) {
+        // 페이지 나가기 (뒤로가기)
+        window.history.back();
+
+        // 또는 특정 URL로 이동하려면 아래처럼 쓰면 돼:
+        // window.location.href = 'https://www.google.com';
+      }
+    });
+  </script>
+
+</body>
+
+</html>
